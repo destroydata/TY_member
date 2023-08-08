@@ -27,7 +27,7 @@ public class MemberService {
         for (String member:
              members) {
             int random = (int) (Math.random()*10000);
-            Member build = Member.builder().name(member).number(random).build();
+            Member build = Member.builder().name(member).number(random).image("https://ca.slack-edge.com/T053ASVJV96-U056TNCRRF1-g80c98b86866-512").build();
             memberList.add(build);
         }
 
