@@ -45,4 +45,10 @@ public class MemberService {
         Member member = byId.get();
         member.setImage(request.image());
     }
+    @Transactional
+    public Member login(String name){
+        Optional<Member> byName = memberRepository.findByName(name);
+        Member member = byName.orElseThrow(() -> new RuntimeException("LOGIN FAIL"));
+        return member;
+    }
 }
